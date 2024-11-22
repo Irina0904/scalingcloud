@@ -13,7 +13,7 @@ resource containerAppEnvironment 'Microsoft.App/managedEnvironments@2024-03-01' 
 
 // Deploy the Application Container as a Container App with public ingress
 resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
-  name: 'my-website'
+  name: 'newminds-scalability'
   location: location
   properties: {
     managedEnvironmentId: containerAppEnvironment.id
@@ -42,7 +42,7 @@ resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
       }
       containers: [
         {
-          name: 'my-website-container'
+          name: 'newminds-scalability-container'
           image: applicationImage
           resources: {
             cpu: json('0.25')
