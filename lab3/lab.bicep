@@ -2,7 +2,7 @@
 param location string = resourceGroup().location
 
 @description('Application Container Image')
-param applicationImage string = 'danielfroding/scalingcloud'
+param applicationImage string = 'ira0904/newminds-scalability'
 
 // Create a Container App Environment
 resource containerAppEnvironment 'Microsoft.App/managedEnvironments@2024-03-01' = {
